@@ -1,3 +1,23 @@
+# -*- coding: utf-8 -*-
+"""
+    Piet-Modeler
+    Shaping piet esotheric language programs into an image.
+    Copyright (C) 2019  Kasonnara <kasonnara@laposte.net>
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <https://www.gnu.org/licenses/>.
+"""
+
 import matplotlib.image as Image
 import numpy as np
 
@@ -220,7 +240,7 @@ if __name__ == '__main__':
     print("Linearising code ...")
     linearized_code = lineariser_basic(raw_code)
     #generate_line_code(linearized_code)
-    model = Image.imread("../message-secret/red-heart-hi-2.png")[:,:,1]<0.5
+    model = Image.imread("../message-secret/mask.jpeg")[:,:,1]<0.5
     out_img = map_code(model, linearized_code)
     print(out_img)
     print("type =", out_img.dtype)
